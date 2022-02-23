@@ -1,0 +1,28 @@
+package com.company;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import static java.lang.System.in;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+        System.out.print("Укажите длину прямоугольника: ");
+        int a = Integer.parseInt(br.readLine());
+
+        System.out.print("Укажите ширину прямоугольника: ");
+        int b = Integer.parseInt(br.readLine());
+
+        int P = 2*(a+b);
+
+        double d = Math.sqrt(a*a+b*b);
+        System.out.printf("Периметр прямоугольника: %d \n", P);
+        System.out.printf("Длина диагонали прямоугольника: %.2f", d);
+
+        in.close();
+    }
+}
