@@ -1,0 +1,30 @@
+package com.company;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import static java.lang.System.in;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+        System.out.print("Введите первое число: ");
+        int a = Integer.parseInt(br.readLine());
+
+        System.out.print("Введите второе число: ");
+        int b = Integer.parseInt(br.readLine());
+
+        if (a==b) {
+            System.out.print("Числа равны");
+        }
+        if (a>b) {
+            System.out.print("Первое число больше второго");
+        }
+        if (a<b) {
+            System.out.print("Первое число меньше второго");
+        }
+        in.close();
+    }
+}
