@@ -1,1 +1,46 @@
+package com.company;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
+public class Main {
+    public static void main(String[] args)
+            throws IOException {
+
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
+        double result = 0;
+        System.out.print("Введите первое число: ");
+        String num1str = reader.readLine();
+        double num1 = Double.parseDouble(num1str);
+
+        System.out.print("Введите второе число: ");
+        String num2str = reader.readLine();
+        double num2 = Double.parseDouble(num2str);
+
+        System.out.print("Выберите действие: +, -, *, /: ");
+        String operation = reader.readLine();
+
+        if (operation.equals("+")) {
+
+            result = num1 + num2;
+        }
+        else if (operation.equals("-")) {
+            result = num1 - num2;
+        }
+        else if (operation.equals("/")) {
+            result = num1 / num2;
+        }
+        else if (operation.equals("*")) {
+            result = num1 * num2;
+        }
+        if (result==num1/0) {
+            System.out.print("Дурак чтоль? На 0 делить нельзя");
+            return;
+        }
+
+        System.out.println("Результат: " + result);
+
+
+    }
+}
